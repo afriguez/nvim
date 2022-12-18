@@ -10,11 +10,11 @@ require("presence"):setup({
     blacklist           = {},
     buttons             = true,
     file_assets         = {},
-    show_time           = false,
+    show_time           = true,
 
     -- Rich Presence text options
-    editing_text        = "📄 -> %s",
-    file_explorer_text  = "🔍 -> %s",
+    editing_text        = "📄 > %s",
+    file_explorer_text  = "🔍 > %s",
     git_commit_text     = "📨 Committing changes",
     plugin_manager_text = "Managing plugins",
     reading_text        = "Reading %s",
