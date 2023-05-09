@@ -19,8 +19,12 @@ vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true })
 vim.keymap.set('n', '<leader>hw', ':HopWord<CR>', { silent = true })
 
 -- harpoon
-vim.keymap.set('n', '<leader>hf', require('harpoon.mark').add_file, { silent = true })
-vim.keymap.set('n', '<leader>hl', require('harpoon.ui').toggle_quick_menu, { silent = true })
+local hp_mark = require('harpoon.mark')
+local hp_ui = require('harpoon.ui')
+vim.keymap.set('n', '<leader>hf', hp_mark.add_file, { silent = true })
+vim.keymap.set('n', '<leader>hl', hp_ui.toggle_quick_menu, { silent = true })
+vim.keymap.set('n', '<leader>hk', hp_ui.nav_next, { silent = true })
+vim.keymap.set('n', '<leader>hj', hp_ui.nav_prev, { silent = true })
 
 -- Gitsigns
 local gs = require('gitsigns')
