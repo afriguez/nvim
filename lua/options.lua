@@ -11,6 +11,10 @@ set.swapfile = false
 set.backup = false
 set.wrap = true
 
+set.list = true
+set.listchars:append "space:⋅"
+set.listchars:append "eol:↴"
+
 vim.cmd [[colorscheme dracula]]
 
 vim.g.loaded_netrw = 1
