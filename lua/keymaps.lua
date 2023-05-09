@@ -21,3 +21,10 @@ vim.keymap.set('n', '<leader>hw', ':HopWord<CR>', { silent = true })
 -- harpoon
 vim.keymap.set('n', '<leader>hf', require('harpoon.mark').add_file, { silent = true })
 vim.keymap.set('n', '<leader>hl', require('harpoon.ui').toggle_quick_menu, { silent = true })
+
+-- Gitsigns
+local gs = require('gitsigns')
+vim.keymap.set('n', ']h', gs.next_hunk, { silent = true })
+vim.keymap.set('n', '[h', gs.prev_hunk, { silent = true })
+vim.keymap.set('n', '<leader>hb', function() gs.blame_line { full = true } end, { silent = true })
+vim.keymap.set('n', '<leader>hd', gs.toggle_deleted, { silent = true })
