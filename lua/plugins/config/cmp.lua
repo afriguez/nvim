@@ -13,17 +13,17 @@ local icons = {
 	kind = {
 		Class = "",
 		Constructor = "",
-		Function = "",
+		Function = "󰊕",
 		Keyword = "",
-		Method = "",
+		Method = "",
 		Module = "",
 		Snippet = "",
-		Text = "",
+		Text = "󰊄",
 		Variable = "",
 		Struct = "",
-		Enum = "",
+		Enum = "",
 		Constant = "",
-		Field = "",
+		Field = "",
 		Interface = ""
 	}
 }
