@@ -30,6 +30,11 @@ return require('packer').startup(function(use)
 	use 'phaazon/hop.nvim'
 	use 'gelguy/wilder.nvim'
 
+	use {
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	}
+
 	use 'elixir-editors/vim-elixir'
 	use 'mhinz/vim-mix-format'
 	use 'yuezk/vim-js'
