@@ -32,3 +32,9 @@ vim.keymap.set('n', ']h', gs.next_hunk, { silent = true })
 vim.keymap.set('n', '[h', gs.prev_hunk, { silent = true })
 vim.keymap.set('n', '<leader>hb', function() gs.blame_line { full = true } end, { silent = true })
 vim.keymap.set('n', '<leader>hd', gs.toggle_deleted, { silent = true })
+
+-- Custom
+vim.keymap.set('n', 'K', ':m .-2<CR>==', { silent = true })
+vim.keymap.set('n', 'J', ':m .+1<CR>==', { silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
