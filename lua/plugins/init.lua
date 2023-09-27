@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
 	use 'yuezk/vim-js'
 	use 'HerringtonDarkholme/yats.vim'
 	use 'MaxMEllon/vim-jsx-pretty'
+	use 'tpope/vim-commentary'
 
 	use 'williamboman/mason.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
