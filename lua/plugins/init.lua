@@ -17,6 +17,7 @@ require('plugins.config.cmp')
 require('plugins.config.gitsigns')
 require('plugins.config.indent_blankline')
 require('plugins.config.noice')
+require('plugins.config.treesitter')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -65,6 +66,7 @@ return require('packer').startup(function(use)
 	use 'lukas-reineke/indent-blankline.nvim'
 	use 'folke/noice.nvim'
 	use 'MunifTanjim/nui.nvim'
+	use 'nvim-treesitter/nvim-treesitter'
 
 	use 'andweeb/presence.nvim'
 
