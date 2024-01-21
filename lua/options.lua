@@ -15,7 +15,7 @@ set.list = true
 set.listchars:append "space:⋅"
 set.listchars:append "eol:↴"
 
-vim.cmd [[colorscheme dracula]]
+vim.cmd [[colorscheme catppuccin-macchiato]]
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
