@@ -18,6 +18,7 @@ require('plugins.config.gitsigns')
 require('plugins.config.indent_blankline')
 require('plugins.config.noice')
 require('plugins.config.treesitter')
+require('plugins.config.catppuccin')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -55,6 +56,7 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-path'
 
 	use 'afriguez/dracula.nvim'
+	use { 'catppuccin/nvim', as = "catppuccin"}
 
 	use {
 		'nvim-lualine/lualine.nvim',
