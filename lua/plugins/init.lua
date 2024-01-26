@@ -37,11 +37,6 @@ return require('packer').startup(function(use)
 		run = function() vim.fn["mkdp#util#install"]() end,
 	}
 
-	use 'elixir-editors/vim-elixir'
-	use 'mhinz/vim-mix-format'
-	use 'yuezk/vim-js'
-	use 'HerringtonDarkholme/yats.vim'
-	use 'MaxMEllon/vim-jsx-pretty'
 	use 'tpope/vim-commentary'
 
 	use 'williamboman/mason.nvim'
