@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
 	use 'folke/noice.nvim'
 	use 'MunifTanjim/nui.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
+	use 'nvim-treesitter/nvim-treesitter-context'
 	use {
 		'rrethy/vim-hexokinase',
 		run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'
