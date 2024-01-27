@@ -12,6 +12,9 @@ vim.keymap.set('n', '<leader>gs', ':Git<CR>', opts)
 vim.keymap.set('n', '<leader>gj', ':diffget //3<CR>', opts)
 vim.keymap.set('n', '<leader>gf', ':diffget //2<CR>', opts)
 vim.keymap.set('n', '<leader>gk', ':Git commit<CR>', opts)
+vim.keymap.set('n', '<leader>gvd', ':Gvdiffsplit!<CR>', opts)
+vim.keymap.set('n', '<leader>P', ':Git pull --rebase<CR>', opts)
+vim.keymap.set('n', '<leader>p', ':Git push -u origin ')
 
 -- nvim-tree
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
