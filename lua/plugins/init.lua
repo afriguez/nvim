@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
 		run = function() vim.fn["mkdp#util#install"]() end,
 	}
 
+	use 'elixir-editors/vim-elixir'
 	use 'tpope/vim-commentary'
 
 	use 'williamboman/mason.nvim'
