@@ -41,6 +41,10 @@ vim.keymap.set('n', '<leader>hd', gs.toggle_deleted, opts)
 local tsc = require('treesitter-context')
 vim.keymap.set('n', ']c', function() tsc.go_to_context(vim.v.count1) end, opts)
 
+-- Notify
+-- dismiss
+vim.keymap.set('n', '<leader>nd', '<cmd>NoiceDismiss<CR>', opts)
+
 -- Custom
 vim.keymap.set('n', 'K', ':m .-2<CR>==', opts)
 vim.keymap.set('n', 'J', ':m .+1<CR>==', opts)
