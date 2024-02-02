@@ -19,6 +19,7 @@ require('plugins.config.indent_blankline')
 require('plugins.config.noice')
 require('plugins.config.treesitter')
 require('plugins.config.catppuccin')
+require('plugins.config.auto_session')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -32,6 +33,7 @@ return require('packer').startup(function(use)
 	use 'phaazon/hop.nvim'
 	use 'gelguy/wilder.nvim'
 
+	use 'rmagatti/auto-session'
 	use {
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
@@ -52,7 +54,7 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-path'
 
 	use 'afriguez/dracula.nvim'
-	use { 'catppuccin/nvim', as = "catppuccin"}
+	use { 'catppuccin/nvim', as = "catppuccin" }
 
 	use {
 		'nvim-lualine/lualine.nvim',
