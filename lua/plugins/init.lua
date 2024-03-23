@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
 	}
 
 	use 'elixir-editors/vim-elixir'
+	use 'gleam-lang/gleam.vim'
+	use 'ionide/ionide-vim'
 	use 'tpope/vim-commentary'
 
 	use 'williamboman/mason.nvim'

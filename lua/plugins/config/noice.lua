@@ -1,4 +1,5 @@
 require("noice").setup({
+	lsp = { progress = { enabled = false } },
 	views = {
 		cmdline_popup = {
 			position = {
