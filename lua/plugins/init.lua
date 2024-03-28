@@ -20,6 +20,7 @@ require('plugins.config.noice')
 require('plugins.config.treesitter')
 require('plugins.config.catppuccin')
 require('plugins.config.auto_session')
+require('plugins.config.deadcolumn')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -70,6 +71,7 @@ return require('packer').startup(function(use)
 	use 'MunifTanjim/nui.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/nvim-treesitter-context'
+	use 'bekaboo/deadcolumn.nvim'
 	use {
 		'rrethy/vim-hexokinase',
 		run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'

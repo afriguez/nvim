@@ -5,8 +5,9 @@ set.relativenumber = true
 set.tabstop = 4
 set.softtabstop = 4
 set.shiftwidth = 4
-set.expandtab = true
+--set.expandtab = true
 set.mouse = ""
+set.colorcolumn = "80"
 
 set.swapfile = false
 set.backup = false
