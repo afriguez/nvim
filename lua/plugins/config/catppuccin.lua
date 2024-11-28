@@ -1,5 +1,5 @@
 require('catppuccin').setup({
-	transparent_background = false,
+	transparent_background = true,
 	integrations = {
 		notify = true,
 		harpoon = true,

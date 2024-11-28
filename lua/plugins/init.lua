@@ -35,10 +35,7 @@ return require('packer').startup(function(use)
 	use 'gelguy/wilder.nvim'
 
 	use 'rmagatti/auto-session'
-	use {
-		"iamcco/markdown-preview.nvim",
-		run = function() vim.fn["mkdp#util#install"]() end,
-	}
+	use 'jakewvincent/mkdnflow.nvim'
 
 	use 'elixir-editors/vim-elixir'
 	use 'gleam-lang/gleam.vim'

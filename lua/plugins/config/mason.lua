@@ -8,6 +8,10 @@ require('mason').setup({
 	}
 })
 
+require('lspconfig').dartls.setup({
+	cmd = { "dart", "language-server", "--protocol=lsp" }
+})
+
 local mason_lspconfig = require('mason-lspconfig')
 mason_lspconfig.setup()
 mason_lspconfig.setup_handlers {
