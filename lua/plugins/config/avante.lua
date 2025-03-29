@@ -1,0 +1,17 @@
+require('avante').setup({
+	provider = "deepseek",
+	vendors = {
+		deepseek = {
+			__inherited_from = "openai",
+			api_key_name = "DEEPSEEK_API_KEY",
+			endpoint = "https://api.deepseek.com",
+			model = "deepseek-coder",
+			temperature = 0,
+			max_tokens = 4096,
+		}
+	}
+})
+
+require('render-markdown').setup({
+	file_types = { 'markdown', 'Avante' },
+})

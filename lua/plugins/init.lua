@@ -21,9 +21,11 @@ require('plugins.config.treesitter')
 require('plugins.config.catppuccin')
 require('plugins.config.auto_session')
 require('plugins.config.deadcolumn')
+require('plugins.config.avante')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
+	use 'tpope/vim-capslock'
 	use 'lewis6991/gitsigns.nvim'
 
 	use 'jiangmiao/auto-pairs'
@@ -75,6 +77,19 @@ return require('packer').startup(function(use)
 	}
 
 	use 'andweeb/presence.nvim'
+
+	use 'stevearc/dressing.nvim'
+	use 'MeanderingProgrammer/render-markdown.nvim'
+
+	use {
+		  'yetone/avante.nvim',
+		  branch = 'main',
+		  run = 'make',
+		  config = function()
+			  require('avante_lib').load()
+			  require('avante').setup()
+		  end
+	}
 
 	if PACKER_BOOTSTRAP then require('packer').sync() end
 end)
