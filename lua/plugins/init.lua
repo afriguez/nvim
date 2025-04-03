@@ -8,7 +8,6 @@ end
 local ok, _ = pcall(require, "packer")
 if not ok then return end
 
-require('plugins.config.nvim_tree')
 require('plugins.config.hop')
 require('plugins.config.lualine')
 require('plugins.config.presence')
@@ -22,6 +21,9 @@ require('plugins.config.catppuccin')
 require('plugins.config.auto_session')
 require('plugins.config.deadcolumn')
 require('plugins.config.avante')
+require('plugins.config.oil')
+require('plugins.config.harpoon')
+require('plugins.config.mini_icons')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -32,7 +34,11 @@ return require('packer').startup(function(use)
 	use 'mattn/emmet-vim'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
-	use 'ThePrimeagen/harpoon'
+	use {
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		requires = { {"nvim-lua/plenary.nvim"} }
+	}
 	use 'phaazon/hop.nvim'
 	use 'gelguy/wilder.nvim'
 
@@ -58,12 +64,16 @@ return require('packer').startup(function(use)
 	use 'afriguez/dracula.nvim'
 	use { 'catppuccin/nvim', as = "catppuccin" }
 
+	use 'echasnovski/mini.icons'
+
 	use {
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		dependencies = { 'echasnovski/mini.icons' },
+		config = function()
+			require("mini.icons").setup()
+			require("mini.icons").mock_nvim_web_devicons()
+		end
 	}
-	use 'nvim-tree/nvim-web-devicons'
-	use 'nvim-tree/nvim-tree.lua'
 	use 'rcarriga/nvim-notify'
 	use 'lukas-reineke/indent-blankline.nvim'
 	use 'folke/noice.nvim'
@@ -87,9 +97,10 @@ return require('packer').startup(function(use)
 		  run = 'make',
 		  config = function()
 			  require('avante_lib').load()
-			  require('avante').setup()
 		  end
 	}
 
+	use 'stevearc/oil.nvim'
+	
 	if PACKER_BOOTSTRAP then require('packer').sync() end
 end)

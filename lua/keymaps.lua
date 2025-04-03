@@ -27,19 +27,23 @@ vim.keymap.set('n', '<leader>gvd', ':Gvdiffsplit!<CR>', opts)
 vim.keymap.set('n', '<leader>P', ':Git pull --rebase<CR>', opts)
 vim.keymap.set('n', '<leader>p', ':Git push -u origin ')
 
--- nvim-tree
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
+-- Oil
+vim.keymap.set('n', '<C-n>', '<CMD>Oil<CR>', opts)
 
 -- HopWord
 vim.keymap.set('n', '<leader>hw', ':HopWord<CR>', opts)
 
 -- harpoon
-local hp_mark = require('harpoon.mark')
-local hp_ui = require('harpoon.ui')
-vim.keymap.set('n', '<leader>hf', hp_mark.add_file, opts)
-vim.keymap.set('n', '<leader>hl', hp_ui.toggle_quick_menu, opts)
-vim.keymap.set('n', '<leader>hk', hp_ui.nav_next, opts)
-vim.keymap.set('n', '<leader>hj', hp_ui.nav_prev, opts)
+local hp = require('harpoon')
+vim.keymap.set('n', '<leader>hf', function() hp:list():add() end, opts)
+
+vim.keymap.set('n', '<C-h>', function() hp:list():select(1) end, opts)
+vim.keymap.set('n', '<C-j>', function() hp:list():select(2) end, opts)
+vim.keymap.set('n', '<C-k>', function() hp:list():select(3) end, opts)
+vim.keymap.set('n', '<C-l>', function() hp:list():select(4) end, opts)
+
+vim.keymap.set("n", "<leader>hk", function() hp:list():prev() end)
+vim.keymap.set("n", "<leader>hj", function() hp:list():next() end)
 
 -- Gitsigns
 local gs = require('gitsigns')
