@@ -13,7 +13,7 @@ vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 -- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>gi', builtin.git_files, opts)
-vim.keymap.set('n', '<leader>fi', builtin.find_files, opts)
+vim.keymap.set('n', '<leader>fi', function() builtin.find_files({ hidden = true }) end, opts)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, opts)
 vim.keymap.set('n', '<leader>fb', builtin.buffers, opts)
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, opts)
@@ -36,6 +36,7 @@ vim.keymap.set('n', '<leader>hw', ':HopWord<CR>', opts)
 -- harpoon
 local hp = require('harpoon')
 vim.keymap.set('n', '<leader>hf', function() hp:list():add() end, opts)
+vim.keymap.set('n', '<leader>hl', function() hp.ui:toggle_quick_menu(hp:list()) end, opts)
 
 vim.keymap.set('n', '<C-h>', function() hp:list():select(1) end, opts)
 vim.keymap.set('n', '<C-j>', function() hp:list():select(2) end, opts)
@@ -59,6 +60,10 @@ vim.keymap.set('n', ']c', function() tsc.go_to_context(vim.v.count1) end, opts)
 -- Notify
 -- dismiss
 vim.keymap.set('n', '<leader>nd', '<cmd>NoiceDismiss<CR>', opts)
+
+-- Global Note
+local gn = require('global-note')
+vim.keymap.set('n', '<leader>gn', function() gn.toggle_note() end, opts)
 
 -- Custom
 vim.keymap.set('n', 'K', ':m .-2<CR>==', opts)

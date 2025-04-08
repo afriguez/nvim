@@ -24,6 +24,8 @@ require('plugins.config.avante')
 require('plugins.config.oil')
 require('plugins.config.harpoon')
 require('plugins.config.mini_icons')
+require('plugins.config.elixir_tools')
+require('plugins.config.global_note')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -45,7 +47,9 @@ return require('packer').startup(function(use)
 	use 'rmagatti/auto-session'
 	use 'jakewvincent/mkdnflow.nvim'
 
-	use 'elixir-editors/vim-elixir'
+	--use 'elixir-editors/vim-elixir'
+	use 'elixir-tools/elixir-tools.nvim'
+
 	use 'gleam-lang/gleam.vim'
 	use 'ionide/ionide-vim'
 	use 'tpope/vim-commentary'
@@ -92,15 +96,17 @@ return require('packer').startup(function(use)
 	use 'MeanderingProgrammer/render-markdown.nvim'
 
 	use {
-		  'yetone/avante.nvim',
-		  branch = 'main',
-		  run = 'make',
-		  config = function()
-			  require('avante_lib').load()
-		  end
+		'yetone/avante.nvim',
+		branch = 'main',
+		run = 'make',
+		config = function()
+			require('avante_lib').load()
+		end
 	}
 
 	use 'stevearc/oil.nvim'
+
+	use 'backdround/global-note.nvim'
 	
 	if PACKER_BOOTSTRAP then require('packer').sync() end
 end)
