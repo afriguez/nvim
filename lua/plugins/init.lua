@@ -107,6 +107,8 @@ return require('packer').startup(function(use)
 	use 'stevearc/oil.nvim'
 
 	use 'backdround/global-note.nvim'
+
+	use 'archibate/lualine-time'
 	
 	if PACKER_BOOTSTRAP then require('packer').sync() end
 end)
