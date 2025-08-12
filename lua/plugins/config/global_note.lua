@@ -1,4 +1,4 @@
 require('global-note').setup({
-	filename = '共通ノート.md',
+	filename = 'メモ.md',
 	directory = "~/"
 })
