@@ -1,13 +1,15 @@
 require('avante').setup({
 	provider = "deepseek",
-	vendors = {
+	providers = {
 		deepseek = {
 			__inherited_from = "openai",
 			api_key_name = "DEEPSEEK_API_KEY",
 			endpoint = "https://api.deepseek.com",
 			model = "deepseek-coder",
-			temperature = 0,
 			max_tokens = 4096,
+			extra_request_body = {
+				temperature = 0
+			}
 		}
 	}
 })

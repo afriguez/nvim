@@ -26,6 +26,8 @@ require('plugins.config.harpoon')
 require('plugins.config.mini_icons')
 require('plugins.config.elixir_tools')
 require('plugins.config.global_note')
+require('plugins.config.obsidian')
+require('plugins.config.vesper')
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -109,6 +111,28 @@ return require('packer').startup(function(use)
 	use 'backdround/global-note.nvim'
 
 	use 'archibate/lualine-time'
-	
+
+	use {
+		'lowitea/aw-watcher.nvim',
+		config = function()
+			require("aw_watcher").setup({
+				aw_server = {
+					host = "127.0.0.1",
+					port = 5600
+				},
+			})
+		end,
+	}
+
+	use {
+		"obsidian-nvim/obsidian.nvim",
+		tag = "*",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	}
+
+	use 'datsfilipe/vesper.nvim'
+
 	if PACKER_BOOTSTRAP then require('packer').sync() end
 end)

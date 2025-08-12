@@ -1,4 +1,8 @@
 require('catppuccin').setup({
+	float = {
+		transparent = true,
+		solid = false
+	},
 	transparent_background = true,
 	integrations = {
 		notify = true,
