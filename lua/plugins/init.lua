@@ -10,7 +10,7 @@ if not ok then return end
 
 require('plugins.config.hop')
 require('plugins.config.lualine')
-require('plugins.config.presence')
+--require('plugins.config.presence')
 require('plugins.config.mason')
 require('plugins.config.cmp')
 require('plugins.config.gitsigns')
@@ -28,6 +28,27 @@ require('plugins.config.elixir_tools')
 require('plugins.config.global_note')
 require('plugins.config.obsidian')
 require('plugins.config.vesper')
+require("gruvbox").setup({
+	terminal_colors = true,
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = {
+		strings = true,
+		emphasis = true,
+		comments = true,
+		operators = false,
+		folds = true,
+	},
+	strikethrough = true,
+	invert_selection = false,
+	invert_signs = false,
+	invert_tabline = false,
+	inverse = true,
+	contrast = "soft",
+	dim_inactive = false,
+	transparent_mode = true,
+})
 
 return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
@@ -92,7 +113,7 @@ return require('packer').startup(function(use)
 		run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'
 	}
 
-	use 'andweeb/presence.nvim'
+	--use 'andweeb/presence.nvim'
 
 	use 'stevearc/dressing.nvim'
 	use 'MeanderingProgrammer/render-markdown.nvim'
@@ -133,6 +154,8 @@ return require('packer').startup(function(use)
 	}
 
 	use 'datsfilipe/vesper.nvim'
+
+	use { "ellisonleao/gruvbox.nvim" }
 
 	if PACKER_BOOTSTRAP then require('packer').sync() end
 end)

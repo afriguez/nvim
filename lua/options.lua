@@ -19,7 +19,8 @@ set.listchars:append "eol:↴"
 
 set.laststatus = 3
 
-vim.cmd [[colorscheme vesper]]
+vim.cmd [[colorscheme gruvbox]]
+set.background = "dark"
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

@@ -1,5 +1,5 @@
 require('lualine').setup({
-	options = { theme = "catppuccin" },
+	options = { theme = "gruvbox" },
 	sections = {
 		lualine_x = {'ctime'},
 	},

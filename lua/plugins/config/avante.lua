@@ -1,6 +1,15 @@
 require('avante').setup({
-	provider = "deepseek",
+	provider = "claude",
 	providers = {
+		claude = {
+			endpoint = "https://api.anthropic.com",
+			model = "claude-sonnet-4-20250514",
+			timeout = 30000,
+			extra_request_body = {
+				temperature = 0.75,
+				max_tokens = 20480,
+			},
+		},
 		deepseek = {
 			__inherited_from = "openai",
 			api_key_name = "DEEPSEEK_API_KEY",
