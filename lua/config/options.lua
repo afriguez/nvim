@@ -16,6 +16,7 @@ set.wrap = true
 set.list = true
 set.listchars:append "space:⋅"
 set.listchars:append "eol:↴"
+set.listchars:append "tab:▍⋅"
 
 set.laststatus = 3
 
