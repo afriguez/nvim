@@ -1,8 +1,8 @@
 return {
-	{
-		"Bekaboo/deadcolumn.nvim",
-		opts = {
-			blending = { threshold = 0.3 }
-		}
-	}
+  {
+    "Bekaboo/deadcolumn.nvim",
+    opts = {
+      blending = { threshold = 0.3 }
+    }
+  }
 }
