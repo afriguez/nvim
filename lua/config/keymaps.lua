@@ -8,7 +8,6 @@ vim.keymap.set('n', '<leader>rr', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 vim.keymap.set('n', '<leader><C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 -- vim.keymap.set('n', '<leader>gp', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
 
-
 vim.keymap.set('n', '<leader>gp', function()
   require('conform').format({
     async = true,
@@ -25,7 +24,6 @@ end, opts)
 vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 
-
 vim.keymap.set('n', '<leader>l', ':noh<CR>', opts)
 
 vim.keymap.set('n', 'K', ':m .-2<CR>==', opts)
@@ -33,11 +31,13 @@ vim.keymap.set('n', 'J', ':m .+1<CR>==', opts)
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 
-vim.api.nvim_set_keymap('x', '<leader>y', '"+y', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>Y', '"+yg_', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>yy', '"+yy', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>P', '"+P', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', '<leader>p', '"+p', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', '<leader>P', '"+P', { noremap = true, silent = true })
+if not (vim.g.hostname == "marija") then
+  vim.api.nvim_set_keymap('x', '<leader>y', '"+y', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<leader>Y', '"+yg_', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<leader>yy', '"+yy', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<leader>P', '"+P', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('x', '<leader>p', '"+p', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('x', '<leader>P', '"+P', { noremap = true, silent = true })
+end

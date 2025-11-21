@@ -29,3 +29,6 @@ vim.api.nvim_create_autocmd("FileType", {
 set.laststatus = 3
 
 set.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- Hostname
+vim.g.hostname = vim.loop.os_gethostname()
