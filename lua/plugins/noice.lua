@@ -11,7 +11,7 @@ return {
             col = "50%",
           },
           size = {
-            width = "75%",
+            width = "30%",
             height = "auto",
           },
         },
@@ -22,7 +22,7 @@ return {
             col = "50%",
           },
           size = {
-            width = "75%",
+            width = "30%",
             height = 10,
           },
           border = {
