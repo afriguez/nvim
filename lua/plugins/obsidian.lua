@@ -2,6 +2,7 @@ return {
   {
     "obsidian-nvim/obsidian.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = false,
     opts = {
       workspaces = {
         {
