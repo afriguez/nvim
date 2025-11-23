@@ -6,7 +6,7 @@ return {
       local mappings = {
         { "<leader>gs",  "<cmd>Git<cr>" },
         { "<leader>gj",  "<cmd>diffget //3<cr>" },
-        { "<leader>gf",  "<cmd>diff //2<cr>" },
+        { "<leader>gf",  "<cmd>diffget //2<cr>" },
         { "<leader>gk",  "<cmd>Git commit<cr>" },
         { "<leader>gvd", "<cmd>Gvdiffsplit!<cr>" },
       }
