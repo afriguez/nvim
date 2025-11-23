@@ -22,8 +22,8 @@ set.listchars:append "tab:▍⋅"
 set.spell = false
 set.spelllang = { 'en', 'es', 'cjk' }
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "markdown", "text", "gitcommit" },
-	command = "setlocal spell",
+  pattern = { "markdown", "text", "gitcommit" },
+  command = "setlocal spell",
 })
 
 set.laststatus = 3

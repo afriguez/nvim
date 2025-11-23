@@ -5,6 +5,7 @@ return {
     lazy = false,
     opts = {
       notifier = { enabled = true, timeout = 3000 },
+      input = { enabled = true },
       image = {
         enabled = true,
         doc = {
