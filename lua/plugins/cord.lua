@@ -1,6 +1,6 @@
 local editor_opts = {}
 
-if vim.g.hostname ~= "marija" then
+if vim.g.hostname ~= vim.g.afriguez then
   editor_opts.tooltip = "北海道"
 end
 

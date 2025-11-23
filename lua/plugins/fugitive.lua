@@ -11,7 +11,7 @@ return {
         { "<leader>gvd", "<cmd>Gvdiffsplit!<cr>" },
       }
 
-      if vim.g.hostname == "marija" then
+      if vim.g.hostname == vim.g.afriguez then
         table.insert(mappings, { "<leader>P", "<cmd>Git pull --rebase<cr>" })
         table.insert(mappings, { "<leader>p", ":Git push -u origin " })
       end

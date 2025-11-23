@@ -1,8 +1,9 @@
 local lazy = false
 
-if vim.g.hostname == "marija" then
+if vim.g.hostname == vim.g.afriguez then
   lazy = true
 end
+
 return {
   {
     "obsidian-nvim/obsidian.nvim",
