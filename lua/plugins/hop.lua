@@ -4,7 +4,7 @@ return {
     opts = {},
     keys = function()
       return {
-        { "<leader>hw", ":HopWord<cr>" }
+        { "<leader>hw", "<cmd>HopWord<cr>" }
       }
     end
   }

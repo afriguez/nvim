@@ -34,7 +34,7 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 
-if not (vim.g.hostname == "marija") then
+if vim.g.hostname ~= "marija" then
   vim.api.nvim_set_keymap('x', '<leader>y', '"+y', { noremap = true, silent = true })
   vim.api.nvim_set_keymap('n', '<leader>Y', '"+yg_', { noremap = true, silent = true })
   vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })

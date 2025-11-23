@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
-if not (vim.g.hostname == "marija") then
+if vim.g.hostname ~= "marija" then
   vim.g.mapleader = ","
 end
 
