@@ -12,6 +12,10 @@ vim.lsp.config('dartls', {
   cmd = { "dart", "language-server", "--protocol=lsp" },
 })
 
+vim.lsp.config("qmlls", {
+  cmd = { "qmlls" }
+})
+
 vim.lsp.config('ltex', {
   settings = {
     ltex = {
