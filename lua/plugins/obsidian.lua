@@ -1,8 +1,13 @@
+local lazy = false
+
+if vim.g.hostname == "marija" then
+  lazy = true
+end
 return {
   {
     "obsidian-nvim/obsidian.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = false,
+    lazy = lazy,
     opts = {
       workspaces = {
         {
