@@ -9,7 +9,9 @@ return {
       styles = { transparency = true }
     },
     init = function()
-      vim.cmd("colorscheme rose-pine")
+      if vim.g.hostname == "marija" then
+        vim.cmd("colorscheme rose-pine")
+      end
     end,
   }
 }

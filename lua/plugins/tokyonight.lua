@@ -18,7 +18,9 @@ return {
       lualine_bold = false,
     },
     init = function()
-      -- vim.cmd("colorscheme tokyonight")
+      if vim.g.hostname ~= "marija" then
+        vim.cmd("colorscheme tokyonight")
+      end
     end,
   }
 }
