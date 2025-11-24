@@ -3,6 +3,12 @@ return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
+    keys = function()
+      local snacks = require("snacks")
+      return {
+        { "<leader>sh", snacks.notifier.show_history }
+      }
+    end,
     opts = {
       notifier = { enabled = true, timeout = 3000 },
       input = { enabled = true },
