@@ -1,7 +1,16 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = { "nvim-treesitter/nvim-treesitter-context" },
+    dependencies = {
+      {
+        "nvim-treesitter/nvim-treesitter-context",
+        main = "treesitter-context",
+        opts = {
+          multiline_treshold = 1,
+          max_lines = 1
+        }
+      }
+    },
     branch = "master",
     lazy = false,
     build = ":TSUpdate",
