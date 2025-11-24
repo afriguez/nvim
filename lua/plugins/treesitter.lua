@@ -6,13 +6,20 @@ return {
     lazy = false,
     build = ":TSUpdate",
     init = function()
-      require('nvim-treesitter').install(
+      local TS = require("nvim-treesitter")
+      TS.install(
         { "go", "latext", "gitcommit" }
-      ):wait(300000)
+      )
 
-      vim.api.nvim_create_autocmd("BufReadPost", {
+      local langs = TS.get_installed()
+      vim.notify(vim.inspect(langs), vim.log.levels.INFO)
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = langs,
         callback = function()
           vim.treesitter.start()
+          vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end,
       })
     end,
