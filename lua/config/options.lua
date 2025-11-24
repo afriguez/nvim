@@ -33,3 +33,4 @@ set.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 -- Hostname
 vim.g.hostname = vim.loop.os_gethostname()
 vim.g.afriguez = "marija"
+vim.g.adrephos = "vin"

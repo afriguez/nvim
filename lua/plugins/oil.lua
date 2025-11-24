@@ -1,3 +1,22 @@
+local hostname = vim.g.hostname
+local use_new_git_status = (
+  hostname ~= vim.g.afriguez and
+  hostname ~= vim.g.adrephos
+)
+
+local git_status_plugin = {
+  "benomahony/oil-git.nvim",
+  dependencies = { "stevearc/oil.nvim" },
+}
+
+if use_new_git_status then
+  git_status_plugin = {
+    "refractalize/oil-git-status.nvim",
+    dependencies = { "stevearc/oil.nvim" },
+    config = true,
+  }
+end
+
 function _G.get_oil_winbar()
   local bufnr = vim.api.nvim_win_get_buf(vim.g.statusline_winid)
   local dir = require("oil").get_current_dir(bufnr)
@@ -31,6 +50,7 @@ return {
       columns = { "icon" },
       win_options = {
         winbar = "%!v:lua.get_oil_winbar()",
+        signcolumn = use_new_git_status and "yes:2" or "no",
       },
       view_options = {
         show_hidden = true,
@@ -49,8 +69,5 @@ return {
       }
     end,
   },
-  {
-    "benomahony/oil-git.nvim",
-    dependencies = { "stevearc/oil.nvim" },
-  }
+  git_status_plugin
 }
