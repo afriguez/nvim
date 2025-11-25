@@ -9,9 +9,7 @@ return {
       styles = { transparency = true }
     },
     init = function()
-      if vim.g.hostname == vim.g.afriguez then
-        vim.cmd("colorscheme rose-pine")
-      end
+      vim.cmd("colorscheme rose-pine")
     end,
   }
 }
