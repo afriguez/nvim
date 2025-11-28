@@ -1,10 +1,10 @@
 local afriguez_opts = {
   filename = "メモ.md",
-  directory = "~/",
+  directory = "~/workspace/nb/home/",
   additional_presets = {
     work = {
       filename = "仕事メモ.md",
-      directory = "~/",
+      directory = "~/workspace/nb/home/",
       command_name = "WorkNote"
     }
   }
