@@ -1,19 +1,18 @@
-local lazy = false
-
+local is_adrephos = true
 if vim.g.hostname == vim.g.afriguez then
-  lazy = true
+  is_adrephos = false
 end
 
 return {
   {
     "obsidian-nvim/obsidian.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = lazy,
+    lazy = false,
     opts = {
       workspaces = {
         {
-          name = "obsidian",
-          path = "~/workspace/obsidian",
+          name = is_adrephos and "obsidian" or "nb",
+          path = is_adrephos and "~/workspace/obsidian" or "~/workspace/nb",
           overrides = {
             frontmatter = { enabled = true },
             footer = { enabled = true },
@@ -49,7 +48,7 @@ return {
         date_format = "%Y-%m-%d-%a",
         time_format = "%H:%M",
       },
-      notes_subdir = "Zettelkasten",
+      notes_subdir = is_adrephos and "Zettelkasten" or "home",
       ui = { enable = false },
       checkbox = {
         enabled = true,
@@ -69,10 +68,10 @@ return {
     },
     keys = function()
       return {
-        { '<leader>v',  '<cmd>Obsidian paste_img<CR>' },
-        { '<leader>of', '<cmd>Obsidian search<CR>' },
-        { '<leader>ol', '<cmd>Obsidian follow_link<CR>' },
-        { '<leader>on', '<cmd>Obsidian new_from_template<CR>' },
+        { "<leader>v",  "<cmd>Obsidian paste_img<cr>" },
+        { "<leader>of", "<cmd>Obsidian search<cr>" },
+        { "<leader>ol", "<cmd>Obsidian follow_link<cr>" },
+        { "<leader>on", is_adrephos and "<cmd>Obsidian new_from_template<CR>" or "<cmd>Obsidian new<cr>" },
       }
     end,
   }
