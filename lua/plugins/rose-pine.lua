@@ -6,7 +6,11 @@ return {
     lazy = false,
     opts = {
       variant = "auto",
-      styles = { transparency = true }
+      styles = { transparency = true },
+      highlight_groups = {
+        ["@module.elixir"] = { fg = "foam", bold = true },
+        ["@string.special.symbol.elixir"] = { fg = "iris", italic = true },
+      },
     },
     init = function()
       vim.cmd("colorscheme rose-pine")

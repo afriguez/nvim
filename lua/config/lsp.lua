@@ -16,6 +16,10 @@ vim.lsp.config("qmlls", {
   cmd = { "qmlls" }
 })
 
+vim.lsp.config("elixir-ls", {
+  cmd = { "elixir-ls" }
+})
+
 vim.lsp.config('ltex', {
   settings = {
     ltex = {
