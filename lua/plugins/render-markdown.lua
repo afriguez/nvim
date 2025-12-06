@@ -7,6 +7,11 @@ return {
       file_types = { 'markdown', 'Avante' },
       completions = { lsp = { enabled = true } },
       render_modes = true,
+      heading = {
+        width = 'block',
+        left_pad = 2,
+        right_pad = 3,
+      },
       latex = {
         enabled = false,
         render_modes = false,
