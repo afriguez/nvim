@@ -6,6 +6,7 @@ return {
         javascript = { "prettierd" },
         typescript = { "prettierd" },
         markdown = { "prettierd" },
+        graphql = { "prettierd" },
       },
     }
   }
