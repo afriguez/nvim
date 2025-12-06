@@ -1,4 +1,4 @@
-vim.lsp.config('lua_ls', {
+vim.lsp.config('emmylua_ls', {
   settings = {
     Lua = {
       diagnostics = {

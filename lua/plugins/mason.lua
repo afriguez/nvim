@@ -23,7 +23,7 @@ return {
         "jdtls",
         "json-lsp",
         "ltex-ls",
-        "lua-language-server",
+        "emmylua_ls",
         "nil",
         "prettierd",
         "ruff",
