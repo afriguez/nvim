@@ -1,6 +1,8 @@
 local is_adrephos = true
+local is_afriguez = false
 if vim.g.hostname == vim.g.afriguez then
   is_adrephos = false
+  is_afriguez = true
 end
 
 return {
@@ -48,7 +50,7 @@ return {
         date_format = "%Y-%m-%d-%a",
         time_format = "%H:%M",
       },
-      notes_subdir = is_adrephos and "Zettelkasten" or "home",
+      notes_subdir = is_afriguez and "home" or "Zettelkasten",
       ui = { enable = false },
       checkbox = {
         enabled = true,
