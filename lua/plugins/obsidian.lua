@@ -11,8 +11,8 @@ return {
     opts = {
       workspaces = {
         {
-          name = is_afriguez and "obsidian" or "nb",
-          path = is_afriguez and "~/workspace/obsidian" or "~/workspace/nb",
+          name = is_afriguez and "nb" or "obsidian",
+          path = is_afriguez and "~/workspace/nb" or "~/workspace/obsidian",
           overrides = {
             frontmatter = { enabled = true },
             footer = { enabled = true },
@@ -71,7 +71,7 @@ return {
         { "<leader>v",  "<cmd>Obsidian paste_img<cr>" },
         { "<leader>of", "<cmd>Obsidian search<cr>" },
         { "<leader>ol", "<cmd>Obsidian follow_link<cr>" },
-        { "<leader>on", is_afriguez and "<cmd>Obsidian new_from_template<CR>" or "<cmd>Obsidian new<cr>" },
+        { "<leader>on", is_afriguez and "<cmd>Obsidian new<cr>" or "<cmd>Obsidian new_from_template<CR>" },
       }
     end,
   }
