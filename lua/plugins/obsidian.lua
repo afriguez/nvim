@@ -1,7 +1,5 @@
-local is_adrephos = true
 local is_afriguez = false
 if vim.g.hostname == vim.g.afriguez then
-  is_adrephos = false
   is_afriguez = true
 end
 
@@ -13,8 +11,8 @@ return {
     opts = {
       workspaces = {
         {
-          name = is_adrephos and "obsidian" or "nb",
-          path = is_adrephos and "~/workspace/obsidian" or "~/workspace/nb",
+          name = is_afriguez and "obsidian" or "nb",
+          path = is_afriguez and "~/workspace/obsidian" or "~/workspace/nb",
           overrides = {
             frontmatter = { enabled = true },
             footer = { enabled = true },
@@ -73,7 +71,7 @@ return {
         { "<leader>v",  "<cmd>Obsidian paste_img<cr>" },
         { "<leader>of", "<cmd>Obsidian search<cr>" },
         { "<leader>ol", "<cmd>Obsidian follow_link<cr>" },
-        { "<leader>on", is_adrephos and "<cmd>Obsidian new_from_template<CR>" or "<cmd>Obsidian new<cr>" },
+        { "<leader>on", is_afriguez and "<cmd>Obsidian new_from_template<CR>" or "<cmd>Obsidian new<cr>" },
       }
     end,
   }
