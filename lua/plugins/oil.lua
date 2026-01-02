@@ -48,6 +48,7 @@ return {
     dependencies = { "nvim-mini/mini.icons" },
     opts = {
       columns = { "icon" },
+      watch_for_changes = true,
       win_options = {
         winbar = "%!v:lua.get_oil_winbar()",
         signcolumn = use_new_git_status and "yes:2" or "no",
