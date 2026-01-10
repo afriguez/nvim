@@ -56,7 +56,7 @@ return {
         order = { " ", "/", "x", "-" },
       },
       attachments = {
-        img_folder = "",
+        folder = "",
         img_name_func = function()
           return string.format("Pasted image %s", os.date "%Y%m%d%H%M%S")
         end,
