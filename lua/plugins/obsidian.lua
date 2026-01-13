@@ -14,6 +14,7 @@ return {
           name = is_afriguez and "nb" or "obsidian",
           path = is_afriguez and "~/workspace/nb" or "~/workspace/obsidian",
           overrides = {
+            notes_subdir = is_afriguez and "home" or "Zettelkasten",
             frontmatter = { enabled = true },
             footer = { enabled = true },
           },
@@ -49,6 +50,7 @@ return {
         time_format = "%H:%M",
       },
       notes_subdir = is_afriguez and "home" or "Zettelkasten",
+      new_notes_location = "notes_subdir",
       ui = { enable = false },
       checkbox = {
         enabled = true,
