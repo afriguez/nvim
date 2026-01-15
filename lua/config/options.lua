@@ -11,7 +11,9 @@ set.colorcolumn = "80"
 
 set.swapfile = false
 set.backup = false
+
 set.wrap = true
+local group = vim.api.nvim_create_augroup("MarkdownSettings", { clear = true })
 
 set.list = true
 set.listchars:append "space:⋅"
@@ -34,3 +36,14 @@ set.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 vim.g.hostname = vim.loop.os_gethostname()
 vim.g.afriguez = "marija"
 vim.g.adrephos = "vin"
+
+if vim.g.hostname ~= vim.g.afriguez then
+  vim.api.nvim_create_autocmd("BufWinEnter", {
+    group = group,
+    pattern = "*.md",
+    callback = function()
+      vim.opt_local.textwidth = 80
+      vim.opt_local.wrap = false
+    end,
+  })
+end
