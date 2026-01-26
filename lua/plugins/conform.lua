@@ -5,6 +5,8 @@ return {
       formatters_by_ft = {
         javascript = { "prettierd" },
         typescript = { "prettierd" },
+        html = { "prettierd" },
+        css = { "prettierd" },
         markdown = { "prettierd" },
         graphql = { "prettierd" },
       },
