@@ -14,6 +14,9 @@ return {
       if vim.g.hostname == vim.g.afriguez then
         table.insert(mappings, { "<leader>P", "<cmd>Git pull --rebase<cr>" })
         table.insert(mappings, { "<leader>p", ":Git push -u origin " })
+      else
+        table.insert(mappings, { "<leader>hP", "<cmd>Git pull --rebase<cr>" })
+        table.insert(mappings, { "<leader>hp", ":Git push -u origin " })
       end
 
       return mappings
