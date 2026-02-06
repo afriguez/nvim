@@ -1,6 +1,9 @@
 return {
   "nvim-telescope/telescope.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  },
   keys = function()
     return {
       { "<leader>gi", "<cmd>Telescope git_files<cr>",  desc = "Git files" },
@@ -10,5 +13,4 @@ return {
       { "<leader>fh", "<cmd>Telescope help_tags<cr>",  desc = "Help tags" }
     }
   end,
-
 }
