@@ -12,7 +12,6 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
       ensure_installed = {
-        "alejandra",
         "cbfmt",
         "clang-format",
         "doctoc",
