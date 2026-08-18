@@ -7,12 +7,12 @@ else
 end
 
 return {
-  {
-    "vyfor/cord.nvim",
-    build = ":Cord update",
-    opts = {
-      editor = editor_opts,
-      idle = { enabled = false },
-    }
-  }
+  -- {
+  --   "vyfor/cord.nvim",
+  --   build = ":Cord update",
+  --   opts = {
+  --     editor = editor_opts,
+  --     idle = { enabled = false },
+  --   }
+  -- }
 }
