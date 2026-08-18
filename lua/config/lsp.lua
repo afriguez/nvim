@@ -42,6 +42,14 @@ vim.lsp.config('ltex', {
   }
 })
 
+vim.lsp.config('rust_analyzer', {
+  settings = {
+    ['rust-analyzer'] = {
+      rustc = { source = 'discover' },
+    },
+  },
+})
+
 vim.lsp.config('nil_ls', {
   settings = {
     ['nil'] = {
