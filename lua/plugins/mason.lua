@@ -10,15 +10,13 @@ return {
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    opts = {
-      ensure_installed = {
+    opts = function()
+      local tools = {
         "cbfmt",
         "clang-format",
         "doctoc",
         "emmet-language-server",
         "eslint-lsp",
-        "gopls",
-        "htmx-lsp",
         "jdtls",
         "json-lsp",
         "ltex-ls",
@@ -32,16 +30,22 @@ return {
         "templ",
         "typescript-language-server",
         "zls"
-      },
-      auto_update = true,
-      run_on_start = true,
-      start_delay = 5000,
-      debounce_hours = 1,
-      integrations = {
-        ['mason-lspconfig'] = true,
-        ['mason-null-ls'] = false,
-        ['mason-nvim-dap'] = false,
-      },
-    }
+      }
+      if vim.g.hostname ~= vim.g.adrephos then
+        table.insert(tools, "gopls")
+      end
+      return {
+        ensure_installed = tools,
+        auto_update = true,
+        run_on_start = true,
+        start_delay = 5000,
+        debounce_hours = 1,
+        integrations = {
+          ['mason-lspconfig'] = true,
+          ['mason-null-ls'] = false,
+          ['mason-nvim-dap'] = false,
+        },
+      }
+    end
   }
 }
