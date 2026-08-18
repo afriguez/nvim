@@ -20,6 +20,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
+  rocks = {
+    enabled = false,
+  },
   spec = {
     { import = "plugins" },
   },
