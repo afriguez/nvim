@@ -13,7 +13,9 @@ return {
       },
     },
     init = function()
-      vim.cmd("colorscheme rose-pine")
+      if vim.g.hostname ~= vim.g.adrephos then
+        vim.cmd("colorscheme rose-pine")
+      end
     end,
   }
 }
